@@ -4,7 +4,7 @@ const { readFileSync } = require("fs");
 const { createApp } = require("@vuepress/core");
 const { parseFrontmatter } = require("@vuepress/shared-utils");
 
-describe("basic functionality", () => {
+describe("options", () => {
   let app;
 
   beforeAll(async () => {
@@ -23,7 +23,7 @@ describe("basic functionality", () => {
     return app.process();
   });
 
-  it("header-anchor insertion", () => {
+  it("option passthrough", () => {
     const text = readFileSync(join(__dirname, "__cases__", "basic.1.md"), "utf8");
     const { data, content } = parseFrontmatter(text);
     const { html } = app.markdown.render(content, {

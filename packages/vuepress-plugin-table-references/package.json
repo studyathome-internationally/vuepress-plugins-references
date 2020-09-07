@@ -17,7 +17,9 @@
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "README.md",
+    "index.js",
+    "LICENSE"
   ],
   "repository": {
     "type": "git",

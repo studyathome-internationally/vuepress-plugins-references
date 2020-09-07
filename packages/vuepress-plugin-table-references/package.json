@@ -1,0 +1,45 @@
+{
+  "name": "vuepress-plugin-table-references",
+  "version": "0.0.0",
+  "description": "Vuepress plugin for table references",
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "markdown",
+    "table",
+    "reference"
+  ],
+  "author": "Alija Sabic <sabic.alija@gmail.com>",
+  "homepage": "https://github.com/studyathome-internationally/vuepress-plugins/tree/master/packages/vuepress-plugin-table-references",
+  "license": "GPL-3.0",
+  "main": "index.js",
+  "directories": {
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studyathome-internationally/vuepress-plugins.git",
+    "directory": "packages/vuepress-plugin-table-references"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:serial": "jest --runInBand --config=jest.config.js",
+    "test:update": "jest --updateSnapshot --config=jest.config.js"
+  },
+  "bugs": {
+    "url": "https://github.com/studyathome-internationally/vuepress-plugins/issues"
+  },
+  "devDependencies": {
+    "@vuepress/core": "^1.5.4",
+    "@vuepress/shared-utils": "^1.5.4",
+    "jest": "^26.4.2",
+    "jest-serializer-vue": "^2.0.2",
+    "prettier": "^2.1.1"
+  },
+  "dependencies": {
+    "markdown-it-table-references": "^0.1.0-alpha.0"
+  }
+}

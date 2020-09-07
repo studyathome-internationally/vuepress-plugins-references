@@ -5,6 +5,15 @@
     },
     {
       "path": "packages/vuepress-plugin-figure-references"
+    },
+    {
+      "path": "packages/vuepress-plugin-table-references"
+    },
+    {
+      "path": "packages/vuepress-plugin-attribution-references"
+    },
+    {
+      "path": "packages/vuepress-plugin-references"
     }
   ],
   "settings": {}

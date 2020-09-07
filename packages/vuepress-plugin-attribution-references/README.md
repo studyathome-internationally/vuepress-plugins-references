@@ -40,10 +40,7 @@ module.exports = {
 }
 ```
 
-The `opts` object can contain:
-
-| Name | Description | Default |
-| ---- | ----------- | ------- |
+The `opts` object is passed through to [markdown-it-attribution-references](https://www.npmjs.com/package/markdown-it-attribution-references) (as is).
 
 ## License
 

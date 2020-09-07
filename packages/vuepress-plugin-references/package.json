@@ -1,0 +1,46 @@
+{
+  "name": "vuepress-plugin-references",
+  "version": "0.0.0",
+  "description": "Vuepress plugin for (ordered) referencing (of images, tables, etc.).",
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "markdown",
+    "reference"
+  ],
+  "author": "Alija Sabic <sabic.alija@gmail.com>",
+  "homepage": "https://github.com/studyathome-internationally/vuepress-plugins/tree/master/packages/vuepress-plugin-references",
+  "license": "GPL-3.0",
+  "main": "index.js",
+  "directories": {
+    "test": "__tests__"
+  },
+  "files": [
+    "README.md",
+    "index.js",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studyathome-internationally/vuepress-plugins.git",
+    "directory": "packages/vuepress-plugin-references"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:serial": "jest --runInBand --config=jest.config.js",
+    "test:update": "jest --updateSnapshot --config=jest.config.js"
+  },
+  "devDependencies": {
+    "@vuepress/core": "^1.5.4",
+    "@vuepress/shared-utils": "^1.5.4",
+    "jest": "^26.4.2",
+    "jest-serializer-vue": "^2.0.2",
+    "prettier": "^2.1.1"
+  },
+  "dependencies": {
+    "markdown-it-references": "^0.1.0-alpha.1",
+    "vuepress-plugin-attribution-references": "^0.0.0",
+    "vuepress-plugin-figure-references": "^0.0.1-alpha.1",
+    "vuepress-plugin-table-references": "^0.0.0"
+  }
+}

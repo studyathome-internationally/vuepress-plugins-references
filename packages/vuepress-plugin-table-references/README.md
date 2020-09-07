@@ -28,6 +28,14 @@ or
 
 ```js
 module.exports = {
+  plugins: ["vuepress-plugin-table-references"]
+}
+```
+
+or
+
+```js
+module.exports = {
   plugins: [["table-references", opts]]
 }
 ```

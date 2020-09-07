@@ -13,7 +13,7 @@ function table_reference_list_open_renderer(opts) {
   return (tokens, idx /* , options, env, self */) => {
     const token = tokens[idx];
     const title = opts.listTitle
-      ? `<h2 id="list-of-figures"><a href="#list-of-tables" class="header-anchor">#</a>${opts.listTitle}</h2>\n`
+      ? `<h2 id="list-of-tables"><a href="#list-of-tables" class="header-anchor">#</a>${opts.listTitle}</h2>\n`
       : "";
     return title + `<${token.tag} class="list-of-tables-list">\n`;
   };

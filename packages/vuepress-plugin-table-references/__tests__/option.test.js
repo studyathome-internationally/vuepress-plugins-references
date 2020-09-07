@@ -57,7 +57,7 @@ describe("options", () => {
           </figcaption>
         </figure>
       </div>
-      <h2 id="list-of-figures"><a href="#list-of-tables" class="header-anchor">#</a>List of Spreadsheets</h2>
+      <h2 id="list-of-tables"><a href="#list-of-tables" class="header-anchor">#</a>List of Spreadsheets</h2>
       <ol class="list-of-tables-list">
         <li><a href="#client-overview">Table 1</a>: Client overview</li>
       </ol>

@@ -5600,10 +5600,10 @@ markdown-it-emoji@^1.4.0:
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-1.4.0.tgz#9bee0e9a990a963ba96df6980c4fddb05dfb4dcc"
   integrity sha1-m+4OmpkKljupbfaYDE/dsF37Tcw=
 
-markdown-it-figure-references@^0.1.0-alpha.0:
-  version "0.1.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-figure-references/-/markdown-it-figure-references-0.1.0-alpha.0.tgz#7a65bdc06b1f51027b474d1751221f5cbeca0623"
-  integrity sha512-Hoj9bF3cnvQfv5WXJpXOMQxgkpxl6OL2aY1ARchRr4Zs2UPoikeJpP3jGg7GNf7rR7Yy5LYxA9n1KYVxX72NtQ==
+markdown-it-figure-references@^1.0.0-alpha.0:
+  version "1.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-figure-references/-/markdown-it-figure-references-1.0.0-alpha.0.tgz#f587999d23834a11db0f03fa9af7b02eb74cb6df"
+  integrity sha512-bAcAJvXRWgcEuY7nUMxI86kt3Bh7CxohtnFXco8FEF7pkIRW0ddSe70MtMHNTtfrX8Q3oIcW2T9E42kXkQdncg==
 
 markdown-it-table-of-contents@^0.4.0:
   version "0.4.4"

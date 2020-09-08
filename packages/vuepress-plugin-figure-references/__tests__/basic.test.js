@@ -17,10 +17,7 @@ describe("basic functionality", () => {
   });
 
   it("header-anchor insertion", () => {
-    const text = readFileSync(
-      join(__dirname, "__cases__", "basic.1.md"),
-      "utf8"
-    );
+    const text = readFileSync(join(__dirname, "__cases__", "basic.1.md"), "utf8");
     const { data, content } = parseFrontmatter(text);
     const { html } = app.markdown.render(content, {
       ...(data.ENV || {}),
@@ -29,9 +26,9 @@ describe("basic functionality", () => {
     expect(html).toMatchInlineSnapshot(`
       <h1 id="hello-world"><a class="header-anchor" href="#hello-world">#</a> Hello World</h1>
       <p>
-      <div id="the-stormtroopocat" class="figure-wrapper">
+      <div id="the-stormtroopocat" class="wrapper">
         <figure>
-          <img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Stormtroopocat" title="The Stormtroopocat" id="the-stormtroopocat-img">
+          <img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Stormtroopocat" title="The Stormtroopocat">
           <figcaption>
             <a href="#the-stormtroopocat">Figure 1</a>: The Stormtroopocat
           </figcaption>

@@ -15,7 +15,9 @@ describe("options", () => {
         [
           "vuepress-plugin-figure-references",
           {
-            listTitle: "List of Images",
+            options: {
+              listTitle: "List of Images",
+            },
           },
         ],
       ],
@@ -33,9 +35,9 @@ describe("options", () => {
     expect(html).toMatchInlineSnapshot(`
       <h1 id="hello-world"><a class="header-anchor" href="#hello-world">#</a> Hello World</h1>
       <p>
-      <div id="the-stormtroopocat" class="figure-wrapper">
+      <div id="the-stormtroopocat" class="wrapper">
         <figure>
-          <img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Stormtroopocat" title="The Stormtroopocat" id="the-stormtroopocat-img">
+          <img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Stormtroopocat" title="The Stormtroopocat">
           <figcaption>
             <a href="#the-stormtroopocat">Figure 1</a>: The Stormtroopocat
           </figcaption>

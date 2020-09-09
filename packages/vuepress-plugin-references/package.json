@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-references",
-  "version": "0.0.1-alpha.2",
+  "version": "1.0.0-alpha.0",
   "description": "Vuepress plugin for (ordered) referencing (of images, tables, etc.).",
   "keywords": [
     "vuepress",

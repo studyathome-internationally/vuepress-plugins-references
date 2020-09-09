@@ -42,6 +42,6 @@
     "prettier": "^2.1.1"
   },
   "dependencies": {
-    "markdown-it-attribution-references": "^0.1.0-alpha.0"
+    "markdown-it-attribution-references": "^1.0.0-alpha.0"
   }
 }

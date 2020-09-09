@@ -16,7 +16,9 @@ describe("options", () => {
           "vuepress-plugin-references",
           {
             figures: {
-              listTitle: "List of Images",
+              options: {
+                listTitle: "List of Images",
+              },
             },
           },
         ],

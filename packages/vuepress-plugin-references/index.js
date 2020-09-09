@@ -10,9 +10,9 @@ const plugin = (options, ctx) => {
   return {
     name: "vuepress-plugin-references",
     plugins: [
-      ["figure-references", { options: optsFigures }],
-      ["table-references", { options: optsTables }],
-      ["attribution-references", { options: optsAttributions }],
+      ["figure-references", optsFigures],
+      ["table-references", optsTables],
+      ["attribution-references", optsAttributions],
     ],
     extendMarkdown: (md) => {
       md.use(require("markdown-it-references"), opts);

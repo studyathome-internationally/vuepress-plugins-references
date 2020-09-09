@@ -1,8 +1,8 @@
 const plugin = (options, ctx) => {
   const opts = Object.assign({}, plugin.defaults.references, options.references);
   const optsFigures = Object.assign({}, plugin.defaults.figures, options.figures);
-  const optsTables = Object.assign({}, plugins.defaults.tables, options.tables);
-  const optsAttributions = Object.assign({}, plugins.defaults.attributions, options.attributions);
+  const optsTables = Object.assign({}, plugin.defaults.tables, options.tables);
+  const optsAttributions = Object.assign({}, plugin.defaults.attributions, options.attributions);
   return {
     name: "vuepress-plugin-references",
     plugins: [
@@ -18,13 +18,13 @@ const plugin = (options, ctx) => {
 
 plugin.defaults = {
   figures: {
-    listTitle: "List of Figures",
+    options: {},
   },
   tables: {
-    listTitle: "List of Tables",
+    options: {},
   },
   attributions: {
-    listTitle: "List of Attributions",
+    options: {},
   },
   references: {},
 };

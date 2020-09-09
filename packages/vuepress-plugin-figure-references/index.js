@@ -47,7 +47,7 @@ plugin.defaults = {
   wrap: true,
   wrapTag: "div",
   wrapClass: "wrapper",
-  options: require("markdown-it-figure-references").defaults,
+  options: {},
 };
 
 module.exports = plugin;

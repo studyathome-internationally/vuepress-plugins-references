@@ -5605,10 +5605,10 @@ markdown-it-table-of-contents@^0.4.0:
   resolved "https://registry.yarnpkg.com/markdown-it-table-of-contents/-/markdown-it-table-of-contents-0.4.4.tgz#3dc7ce8b8fc17e5981c77cc398d1782319f37fbc"
   integrity sha512-TAIHTHPwa9+ltKvKPWulm/beozQU41Ab+FIefRaQV1NRnpzwcV9QOe6wXQS5WLivm5Q/nlo0rl6laGkMDZE7Gw==
 
-markdown-it-table-references@^0.1.0-alpha.0:
-  version "0.1.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-table-references/-/markdown-it-table-references-0.1.0-alpha.0.tgz#76747aefab67c56fd8d482820ecc70a011403de4"
-  integrity sha512-GYrcUY3t9py7er13XLED8/rd8ubuchEDbNF850iaex0CGtyQTK1nHnGg82MVPcQ4zsfqch31x0nI7e/0xswNXw==
+markdown-it-table-references@^1.0.0-alpha.0:
+  version "1.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-table-references/-/markdown-it-table-references-1.0.0-alpha.0.tgz#99c0cf705db732124e7685ec5f697347d91d5eb3"
+  integrity sha512-MEPnY9NAWpSHAGpbKmF+XKXG88qKsrQcRkiiuM319GhrdomVSgs+v4JGShUXU5mEjy6mSgXeYEc5+9HU9QvrlQ==
 
 markdown-it@^8.4.1:
   version "8.4.2"

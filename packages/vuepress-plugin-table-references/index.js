@@ -33,11 +33,15 @@ function table_wrapper_open_renderer(opts, defaultRenderer) {
   return (tokens, idx, options, env, self) => {
     const token = tokens[idx];
     const id = token.attrGet("id");
-    const rId = new RegExp('\\s?id="' + id + '"');
-    const figureOpen = defaultRenderer(tokens, idx, options, env, self).replace(rId, "");
+    const figureOpen = defaultRenderer(tokens, idx, options, env, self);
     if (id) {
-      return `<${opts.wrapTag} id="${id}"${opts.wrapClass ? ` class="${opts.wrapClass}"` : ""}>${figureOpen}`;
+      const rId = new RegExp('\\s?id="' + id + '"');
+      return `<${opts.wrapTag} id="${id}"${opts.wrapClass ? ` class="${opts.wrapClass}"` : ""}>${figureOpen.replace(
+        rId,
+        ""
+      )}`;
     }
+    return figureOpen;
   };
 }
 

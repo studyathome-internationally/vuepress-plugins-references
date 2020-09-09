@@ -6,6 +6,7 @@ const plugin = (options, ctx) => {
     extendMarkdown: (md) => {
       md.use(require("markdown-it-figure-references"), opts.options);
       md.renderer.rules.figure_reference_list_open = figure_reference_list_open_renderer(opts);
+
       const defaultRenderer = md.renderer.rules.figure_wrapper;
       md.renderer.rules.figure_wrapper = figure_wrapper_renderer(opts, defaultRenderer);
     },
@@ -31,14 +32,15 @@ function figure_wrapper_renderer(opts, defaultRenderer) {
     const id = token.meta.targetId;
     const entry = env[opts.options.ns].refs[id];
     const rId = new RegExp('\\s?id="' + id + '"');
-    const figure = defaultRenderer(tokens, idx, options, env, self).replace(rId, "");
+    const figure = defaultRenderer(tokens, idx, options, env, self);
     if (id && entry) {
       return (
-        `<${opts.wrapTag} id="${id}" ${opts.wrapClass ? `class="${opts.wrapClass}"` : ""}>\n` +
-        `  ${figure}\n` +
+        `<${opts.wrapTag} id="${id}"${opts.wrapClass ? ` class="${opts.wrapClass}"` : ""}>\n` +
+        `  ${figure.replace(rId, "")}\n` +
         `</${opts.wrapTag}>`
       );
     }
+    return figure;
   };
 }
 

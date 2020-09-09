@@ -15,7 +15,9 @@ describe("options", () => {
         [
           "vuepress-plugin-table-references",
           {
-            listTitle: "List of Spreadsheets",
+            options: {
+              listTitle: "List of Spreadsheets",
+            },
           },
         ],
       ],
@@ -32,7 +34,7 @@ describe("options", () => {
     });
     expect(html).toMatchInlineSnapshot(`
       <h1 id="hello-world"><a class="header-anchor" href="#hello-world">#</a> Hello World</h1>
-      <div class="table-wrapper" id="client-overview">
+      <div id="client-overview" class="wrapper">
         <figure>
           <table>
             <thead>

@@ -17,7 +17,10 @@ describe("basic functionality", () => {
   });
 
   it("header-anchor insertion", () => {
-    const text = readFileSync(join(__dirname, "__cases__", "basic.1.md"), "utf8");
+    const text = readFileSync(
+      join(__dirname, "__cases__", "basic.1.md"),
+      "utf8"
+    );
     const { data, content } = parseFrontmatter(text);
     const { html } = app.markdown.render(content, {
       ...(data.ENV || {}),
@@ -25,7 +28,7 @@ describe("basic functionality", () => {
     });
     expect(html).toMatchInlineSnapshot(`
       <h1 id="hello-world"><a class="header-anchor" href="#hello-world">#</a> Hello World</h1>
-      <div class="table-wrapper" id="client-overview">
+      <div id="client-overview" class="wrapper">
         <figure>
           <table>
             <thead>

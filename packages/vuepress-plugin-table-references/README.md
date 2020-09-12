@@ -62,6 +62,7 @@ The `wrap` object can contain:
 | `class`  | Wrapper class. | `"wrapper"` |
 
 <br/>
+
 ## License
 
 [GPL-3.0](https://github.com/studyathome-internationally/vuepress-plugins/blob/master/LICENSE) &copy; [StudyATHome Internationally](https://github.com/studyathome-internationally/)

@@ -1,54 +1,61 @@
 const plugin = (options, ctx) => {
-  const opts = Object.assign({}, plugin.defaults, options);
-  opts.options = Object.assign({}, require("markdown-it-figure-references").defaults, options.options);
+  const opts = loadOptions(options);
+  opts.options.after = "inline";
   return {
     name: "vuepress-plugin-figure-references",
     extendMarkdown: (md) => {
       md.use(require("markdown-it-figure-references"), opts.options);
-      md.renderer.rules.figure_reference_list_open = figure_reference_list_open_renderer(opts);
 
-      const defaultRenderer = md.renderer.rules.figure_wrapper;
-      md.renderer.rules.figure_wrapper = figure_wrapper_renderer(opts, defaultRenderer);
+      if (opts.wrap.enable) {
+        md.renderer.rules.figure_open = figure_open_renderer(opts);
+        md.renderer.rules.figure_close = figure_close_renderer(opts);
+      } else {
+        const defaultImageRenderer = md.renderer.rules.image;
+        md.renderer.rules.image = image_renderer(opts, defaultImageRenderer);
+      }
     },
   };
 };
 
-function figure_reference_list_open_renderer(opts) {
-  return (tokens, idx /* , options, env, self */) => {
+function figure_open_renderer(opts) {
+  return (tokens, idx, options, env, self) => {
     const token = tokens[idx];
-    const title = opts.options.listTitle
-      ? `<h2 id="list-of-figures">${
-          opts.listHeaderAnchor ? `<a href="#list-of-figures" class="header-anchor">#</a>` : ""
-        }${opts.options.listTitle}</h2>\n`
-      : "";
-    return title + `<${token.tag} class="list-of-figures-list">\n`;
+    const id = token.attrGet("id");
+    return `<${opts.wrap.tag} id="${id}" class="${opts.wrap.class}">\n<${token.tag}>\n`;
   };
 }
 
-function figure_wrapper_renderer(opts, defaultRenderer) {
-  if (!opts.wrap || !opts.wrapTag) return defaultRenderer;
+function figure_close_renderer(opts) {
   return (tokens, idx, options, env, self) => {
     const token = tokens[idx];
-    const id = token.meta.targetId;
-    const entry = env[opts.options.ns].refs[id];
-    const rId = new RegExp('\\s?id="' + id + '"');
-    const figure = defaultRenderer(tokens, idx, options, env, self);
-    if (id && entry) {
-      return (
-        `<${opts.wrapTag} id="${id}"${opts.wrapClass ? ` class="${opts.wrapClass}"` : ""}>\n` +
-        `  ${figure.replace(rId, "")}\n` +
-        `</${opts.wrapTag}>`
-      );
-    }
-    return figure;
+    return `</${token.tag}>\n</${opts.wrap.tag}>`;
   };
+}
+
+function image_renderer(opts, renderer) {
+  return (tokens, idx, options, env, self) => {
+    const token = tokens[idx];
+    const id = token.attrGet("id");
+    const image = renderer(tokens, idx, options, env, self).replace(`id="${id}"`, "");
+    return `<${opts.wrap.tag} id="${id}" class="${opts.wrap.class}">${image}</${opts.wrap.tag}>`;
+  };
+}
+
+function loadOptions(options) {
+  return options
+    ? {
+        wrap: Object.assign({}, plugin.defaults.wrap, options.wrap ? options.wrap : {}),
+        options: Object.assign({}, plugin.defaults.options, options.options ? options.options : {}),
+      }
+    : plugin.defaults;
 }
 
 plugin.defaults = {
-  listHeaderAnchor: true,
-  wrap: true,
-  wrapTag: "div",
-  wrapClass: "wrapper",
+  wrap: {
+    enable: true,
+    tag: "div",
+    class: "wrapper",
+  },
   options: {},
 };
 

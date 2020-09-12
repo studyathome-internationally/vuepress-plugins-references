@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-figure-references",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "VuePress plugin for figure references",
   "keywords": [
     "vuepress",

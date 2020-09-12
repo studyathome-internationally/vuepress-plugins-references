@@ -20,27 +20,48 @@ Enable plugin in `.vuepress/config.js`
 
 ```js
 module.exports = {
-  plugins: ["figure-references"]
-}
+  plugins: ["figure-references"],
+};
 ```
 
 or
 
 ```js
 module.exports = {
-  plugins: ["vuepress-plugin-figure-references"]
-}
+  plugins: ["vuepress-plugin-figure-references"],
+};
 ```
 
 or
 
 ```js
 module.exports = {
-  plugins: [["figure-references", opts]]
-}
+  plugins: [["figure-references", opts]],
+};
 ```
 
-The `opts` object is passed through to [markdown-it-figure-references](https://www.npmjs.com/package/markdown-it-figure-references) (as is).
+<style>
+table { width: 100%;} td:first-child {width: 15%;} td:last-child {width: 45%;}
+</style>
+
+The `opts` object can contain:
+
+| Name      | Description                                                                                                         | Default                                                                                                                           |
+| --------- | ------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `wrap`    | Rule name to insert new rules after.                                                                                | see below                                                                                                                         |
+| `options` | [markdown-it-figure-references](https://www.npmjs.com/package/markdown-it-figure-references) configuration options. | see [here](https://github.com/studyathome-internationally/markdown-it-plugins/tree/master/packages/markdown-it-figure-references) |
+
+<br/>
+
+The `wrap` object can contain:
+
+| Name     | Description    | Default     |
+| -------- | -------------- | ----------- |
+| `enable` | Wrap figure.   | `true`      |
+| `tag`    | Wrapper tag.   | `"div"`     |
+| `class`  | Wrapper class. | `"wrapper"` |
+
+<br/>
 
 ## License
 

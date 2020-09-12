@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-figure-references",
-  "version": "1.0.0-1.0.0-alpha.3.0",
+  "version": "1.0.0-alpha.3",
   "description": "VuePress plugin for figure references",
   "keywords": [
     "vuepress",
@@ -37,7 +37,7 @@
     "test:badges": "yarn test:coverage && jest-coverage-badges"
   },
   "dependencies": {
-    "markdown-it-figure-references": "^1.0.0-alpha.8"
+    "markdown-it-figure-references": "^1.0.0-alpha.9"
   },
   "devDependencies": {
     "@vuepress/core": "^1.5.4",

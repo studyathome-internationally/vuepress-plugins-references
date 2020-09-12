@@ -1,63 +1,49 @@
 const plugin = (options, ctx) => {
-  const opts = Object.assign({}, plugin.defaults, options);
-  opts.options = Object.assign({}, require("markdown-it-table-references").defaults, options.options);
+  const opts = loadOptions(options);
+  opts.options.after = "inline";
   return {
     name: "vuepress-plugin-table-references",
     extendMarkdown: (md) => {
       md.use(require("markdown-it-table-references"), opts.options);
-      md.renderer.rules.table_reference_list_open = table_reference_list_open_renderer(opts);
 
-      const defaultOpenRenderer = md.renderer.rules.table_wrapper_open;
-      md.renderer.rules.table_wrapper_open = table_wrapper_open_renderer(opts, defaultOpenRenderer);
-
-      const defaultCloseRenderer = md.renderer.rules.table_wrapper_close;
-      md.renderer.rules.table_wrapper_close = table_wrapper_close_renderer(opts, defaultCloseRenderer);
+      if (opts.wrap.enable) {
+        md.renderer.rules.figure_table_open = figure_table_open_renderer(opts);
+        md.renderer.rules.figure_table_close = figure_table_close_renderer(opts);
+      }
     },
   };
 };
 
-function table_reference_list_open_renderer(opts) {
-  return (tokens, idx /* , options, env, self */) => {
-    const token = tokens[idx];
-    const title = opts.options.listTitle
-      ? `<h2 id="list-of-tables">${
-          opts.listHeaderAnchor ? `<a href="#list-of-tables" class="header-anchor">#</a>` : ""
-        }${opts.options.listTitle}</h2>\n`
-      : "";
-    return title + `<${token.tag} class="list-of-tables-list">\n`;
-  };
-}
-
-function table_wrapper_open_renderer(opts, defaultRenderer) {
-  if (!opts.wrap || !opts.wrapTag) return defaultRenderer;
+function figure_table_open_renderer(opts) {
   return (tokens, idx, options, env, self) => {
     const token = tokens[idx];
     const id = token.attrGet("id");
-    const figureOpen = defaultRenderer(tokens, idx, options, env, self);
-    if (id) {
-      const rId = new RegExp('\\s?id="' + id + '"');
-      return `<${opts.wrapTag} id="${id}"${opts.wrapClass ? ` class="${opts.wrapClass}"` : ""}>${figureOpen.replace(
-        rId,
-        ""
-      )}`;
-    }
-    return figureOpen;
+    return `<${opts.wrap.tag} id="${id}" class="${opts.wrap.class}">\n<${token.tag}>\n`;
   };
 }
 
-function table_wrapper_close_renderer(opts, defaultRenderer) {
-  if (!opts.wrap || !opts.wrapTag) return defaultRenderer;
+function figure_table_close_renderer(opts) {
   return (tokens, idx, options, env, self) => {
-    const figureClose = defaultRenderer(tokens, idx, options, env, self);
-    return figureClose + `</${opts.wrapTag}>\n`;
+    const token = tokens[idx];
+    return `</${token.tag}>\n</${opts.wrap.tag}>`;
   };
+}
+
+function loadOptions(options) {
+  return options
+    ? {
+        wrap: Object.assign({}, plugin.defaults.wrap, options.wrap ? options.wrap : {}),
+        options: Object.assign({}, plugin.defaults.options, options.options ? options.options : {}),
+      }
+    : plugin.defaults;
 }
 
 plugin.defaults = {
-  listHeaderAnchor: true,
-  wrap: true,
-  wrapTag: "div",
-  wrapClass: "wrapper",
+  wrap: {
+    enable: true,
+    tag: "div",
+    class: "wrapper",
+  },
   options: {},
 };
 

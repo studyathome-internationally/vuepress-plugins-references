@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-attribution-references",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "description": "Vuepress plugin for attributions and attribution references",
   "keywords": [
     "vuepress",

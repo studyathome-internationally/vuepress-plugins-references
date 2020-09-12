@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-references",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0-alpha.6",
   "description": "Vuepress plugin for (ordered) referencing (of images, tables, etc.).",
   "keywords": [
     "vuepress",
@@ -42,8 +42,8 @@
   },
   "dependencies": {
     "markdown-it-references": "^1.0.0-alpha.10",
-    "vuepress-plugin-attribution-references": "^1.0.0-alpha.5",
-    "vuepress-plugin-figure-references": "^1.0.0-alpha.5",
-    "vuepress-plugin-table-references": "^1.0.0-alpha.5"
+    "vuepress-plugin-attribution-references": "^1.0.0-alpha.6",
+    "vuepress-plugin-figure-references": "^1.0.0-alpha.6",
+    "vuepress-plugin-table-references": "^1.0.0-alpha.6"
   }
 }

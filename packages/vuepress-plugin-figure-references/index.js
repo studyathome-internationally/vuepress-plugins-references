@@ -7,11 +7,13 @@ const plugin = (options, ctx) => {
       md.use(require("markdown-it-figure-references"), opts.options);
 
       if (opts.wrap.enable) {
-        md.renderer.rules.figure_image_open = figure_image_open_renderer(opts);
-        md.renderer.rules.figure_image_close = figure_image_close_renderer(opts);
-      } else {
-        const defaultImageRenderer = md.renderer.rules.image;
-        md.renderer.rules.image = image_renderer(opts, defaultImageRenderer);
+        if (opts.options && typeof opts.options.wrap === "boolean" && opts.options.wrap === false) {
+          const defaultImageRenderer = md.renderer.rules.image;
+          md.renderer.rules.image = image_renderer(opts, defaultImageRenderer);
+        } else {
+          md.renderer.rules.figure_image_open = figure_image_open_renderer(opts);
+          md.renderer.rules.figure_image_close = figure_image_close_renderer(opts);
+        }
       }
     },
   };
@@ -43,7 +45,7 @@ function image_renderer(opts, renderer) {
 
 function loadOptions(options) {
   return {
-    wrap: Object.assign({}, plugin.defaults.wrap, typeof options.wrap === "boolean" ? options.wrap : {}),
+    wrap: Object.assign({}, plugin.defaults.wrap, options.wrap ? options.wrap : {}),
     options: Object.assign({}, plugin.defaults.options, options.options ? options.options : {}),
   };
 }

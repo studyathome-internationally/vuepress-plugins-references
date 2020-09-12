@@ -1,36 +1,35 @@
 const plugin = (options, ctx) => {
-  const opts = Object.assign({}, plugin.defaults.references, options.references);
-  const optsFigures = Object.assign({}, require("markdown-it-figure-references").defaults, options.figures);
-  const optsTables = Object.assign({}, require("markdown-it-table-references").defaults, options.tables);
-  const optsAttributions = Object.assign(
-    {},
-    require("markdown-it-attribution-references").defaults,
-    options.attributions
-  );
+  opts = loadOptions(options);
+
   return {
     name: "vuepress-plugin-references",
     plugins: [
-      ["figure-references", optsFigures],
-      ["table-references", optsTables],
-      ["attribution-references", optsAttributions],
+      ["attribution-references", opts.attributions],
+      ["table-references", opts.tables],
+      ["figure-references", opts.figures],
     ],
     extendMarkdown: (md) => {
-      md.use(require("markdown-it-references"), opts);
+      md.use(require("markdown-it-references"), opts.options);
     },
   };
 };
 
+function loadOptions(options) {
+  return options
+    ? {
+        options: Object.assign({}, plugin.defaults.options, options.options ? options.options : {}),
+        figures: Object.assign({}, plugin.defaults.figures, options.figures ? options.figures : {}),
+        tables: Object.assign({}, plugin.defaults.tables, options.tables ? options.tables : {}),
+        attributions: Object.assign({}, plugin.defaults.attributions, options.attributions ? options.attributions : {}),
+      }
+    : plugin.defaults;
+}
+
 plugin.defaults = {
-  figures: {
-    options: {},
-  },
-  tables: {
-    options: {},
-  },
-  attributions: {
-    options: {},
-  },
-  references: {},
+  options: {},
+  figures: {},
+  tables: {},
+  attributions: {},
 };
 
 module.exports = plugin;

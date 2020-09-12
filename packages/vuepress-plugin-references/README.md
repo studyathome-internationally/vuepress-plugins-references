@@ -20,37 +20,40 @@ Enable plugin in `.vuepress/config.js`
 
 ```js
 module.exports = {
-  plugins: ["references"]
-}
+  plugins: ["references"],
+};
 ```
 
 or
 
 ```js
 module.exports = {
-  plugins: ["vuepress-plugin-references"]
-}
+  plugins: ["vuepress-plugin-references"],
+};
 ```
 
 or
 
 ```js
 module.exports = {
-  plugins: [["references", opts]]
-}
+  plugins: [["references", opts]],
+};
 ```
+
+<style>
+table { width: 100%;} td:first-child {width: 15%;} td:last-child {width: 45%;}
+</style>
 
 The `opts` object can contain:
 
-| Name           | Description                                                                                                           | Default                                 |
-| -------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| `references`   | [markdown-it-references](https://www.npmjs.com/package/markdown-it-references) configuration.                         | `{ }`                                   |
-| `figures`      | [markdown-it-figure-references](https://www.npmjs.com/package/markdown-it-figure-references) configuration.           | `{ listTitle: "List of Figures" }`      |
-| `tables`       | [markdown-it-table-references](https://www.npmjs.com/package/markdown-it-table-references) configuration.             | `{ listTitle: "List of Tables" }`       |
-| `attributions` | [markdown-it-attribution-references](https://www.npmjs.com/package/markdown-it-attribution-references) configuration. | `{ listTitle: "List of Attributions" }` |
+| Name           | Description                                                                                                                          | Default                                                                                                                                 |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `options`      | [markdown-it-references](https://www.npmjs.com/package/markdown-it-references) configuration option.                                 | see [here](https://github.com/studyathome-internationally/markdown-it-plugins/tree/master/packages/markdown-it-references)              |
+| `figures`      | [vuepress-plugin-figure-references](https://www.npmjs.com/package/vuepress-plugin-figure-references) configuration option.           | see [here](https://github.com/studyathome-internationally/vuepress-plugins/tree/master/packages/vuepress-plugin-figure-references)      |
+| `tables`       | [vuepress-plugin-table-references](https://www.npmjs.com/package/vuepress-plugin-table-references) configuration option.             | see [here](https://github.com/studyathome-internationally/vuepress-plugins/tree/master/packages/vuepress-plugin-table-references)       |
+| `attributions` | [vuepress-plugin-attribution-references](https://www.npmjs.com/package/vuepress-plugin-attribution-references) configuration option. | see [here](https://github.com/studyathome-internationally/vuepress-plugins/tree/master/packages/vuepress-plugin-attribution-references) |
 
-**NOTE**  
-Invidiual configuration objects are passed through to the respective markdown-it plugins.
+<br/>
 
 ## License
 

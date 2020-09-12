@@ -30,14 +30,14 @@ describe("basic functionality", () => {
         <figure>
           <img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Stormtroopocat" title="The Stormtroopocat">
           <figcaption>
-            <a href="#the-stormtroopocat">Figure 1</a>: The Stormtroopocat
+            <a href="#the-stormtroopocat" class="anchor">§</a><a href="#the-stormtroopocat" class="label">Figure 1</a>: The Stormtroopocat
           </figcaption>
         </figure>
       </div>
       </p>
-      <h2 id="list-of-figures"><a href="#list-of-figures" class="header-anchor">#</a>List of Figures</h2>
-      <ol class="list-of-figures-list">
-        <li><a href="#the-stormtroopocat">Figure 1</a>: The Stormtroopocat</li>
+      <h2 id="list-of-figures" class="list"><a class="header-anchor" href="#list-of-figures">#</a> List of Figures</h2>
+      <ol class="list">
+        <li class="item"><a href="#the-stormtroopocat" class="label">Figure 1</a>: The Stormtroopocat</li>
       </ol>
     `);
   });

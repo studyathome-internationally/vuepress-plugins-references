@@ -2,6 +2,18 @@
 
 > [VuePress](https://vuepress.vuejs.org/) plugin for table referencing with [markdown-it-table-references](https://www.npmjs.com/package/markdown-it-table-references).
 
+<div>
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/studyathome-internationally/vuepress-plugins/master/packages/vuepress-plugin-table-references/coverage/badge-branches.svg">
+    <img src="https://raw.githubusercontent.com/studyathome-internationally/vuepress-plugins/master/packages/vuepress-plugin-table-references/coverage/badge-functions.svg">
+    <img src="https://raw.githubusercontent.com/studyathome-internationally/vuepress-plugins/master/packages/vuepress-plugin-table-references/coverage/badge-lines.svg">
+    <img src="https://raw.githubusercontent.com/studyathome-internationally/vuepress-plugins/master/packages/vuepress-plugin-table-references/coverage/badge-statements.svg">
+    <a href="https://raw.githubusercontent.com/studyathome-internationally/vuepress-plugins/master/packages/vuepress-plugin-table-references/LICENSE" target="_blank">
+      <img src="https://badgen.net/github/license/studyathome-internationally/vuepress-plugins">
+    </a>
+  </p>
+</div>
+
 ## Installation
 
 ```sh

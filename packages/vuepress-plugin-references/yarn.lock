@@ -5597,7 +5597,7 @@ markdown-it-anchor@^5.0.2:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.3.0.tgz#d549acd64856a8ecd1bea58365ef385effbac744"
   integrity sha512-/V1MnLL/rgJ3jkMWo84UR+K+jF1cxNG1a+KwqeXqTIJ+jtA8aWSHuigx8lTzauiIjBDbwF3NcWQMotd0Dm39jA==
 
-markdown-it-attribution-references@^1.0.0-alpha.0:
+markdown-it-attribution-references@^1.0.0-alpha.10:
   version "1.0.0-alpha.10"
   resolved "https://registry.yarnpkg.com/markdown-it-attribution-references/-/markdown-it-attribution-references-1.0.0-alpha.10.tgz#11a6eedcb71628cde0823c2c26879810b9cba234"
   integrity sha512-X+jcxA+9NUYpTABT7XlmaWIOlZTLl4EWs37CQn5hZ8sJwMgvIXXwoTWuxKd4u6A507vsO+bbXXx4+t+oBdUEXw==
@@ -5621,7 +5621,7 @@ markdown-it-emoji@^1.4.0:
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-1.4.0.tgz#9bee0e9a990a963ba96df6980c4fddb05dfb4dcc"
   integrity sha1-m+4OmpkKljupbfaYDE/dsF37Tcw=
 
-markdown-it-figure-references@^1.0.0-alpha.0:
+markdown-it-figure-references@^1.0.0-alpha.9:
   version "1.0.0-alpha.9"
   resolved "https://registry.yarnpkg.com/markdown-it-figure-references/-/markdown-it-figure-references-1.0.0-alpha.9.tgz#659277a8b78b6fdc4e8784d0599a8bfc99c67801"
   integrity sha512-xs2hyOfHjRwH6/MsazQU0id3xMtuOneV9Essp6ICEnEqsBN7pLYYhL5AZSkARGEC0A8q8gpak+dbJ9rjTvo54w==
@@ -5638,7 +5638,7 @@ markdown-it-table-of-contents@^0.4.0:
   resolved "https://registry.yarnpkg.com/markdown-it-table-of-contents/-/markdown-it-table-of-contents-0.4.4.tgz#3dc7ce8b8fc17e5981c77cc398d1782319f37fbc"
   integrity sha512-TAIHTHPwa9+ltKvKPWulm/beozQU41Ab+FIefRaQV1NRnpzwcV9QOe6wXQS5WLivm5Q/nlo0rl6laGkMDZE7Gw==
 
-markdown-it-table-references@^1.0.0-alpha.0:
+markdown-it-table-references@^1.0.0-alpha.9:
   version "1.0.0-alpha.9"
   resolved "https://registry.yarnpkg.com/markdown-it-table-references/-/markdown-it-table-references-1.0.0-alpha.9.tgz#803e20f4bc7f79cfda02a6e84dbab8c4c1bd483d"
   integrity sha512-MXabqbYCwqmJpdx5dfPaposztdqnUS18MPqeryMZhGBBEmZyHvJ72MemyYVR20Hcmgoy+kbZcH3ZFKvd9S55Iw==
@@ -8651,12 +8651,12 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
-vuepress-plugin-attribution-references@^1.0.0-alpha.0:
-  version "1.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-attribution-references/-/vuepress-plugin-attribution-references-1.0.0-alpha.0.tgz#3035d40c3975b98ae2335965cafc6016cb4672ee"
-  integrity sha512-7ktB2vvYIiWIfkjNFq8GtfJPxG7eOVr+RYkyClJ4ec3xOA+SG5AMVhYJh2kH34/HEHQilY2vrpdHTWLWhm1KVw==
+vuepress-plugin-attribution-references@^1.0.0-alpha.3:
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-attribution-references/-/vuepress-plugin-attribution-references-1.0.0-alpha.3.tgz#1c3c6469c01cfb7b5f9ef8a4b48abbe2fcf4b104"
+  integrity sha512-BoL1IaQ7SYg2UmU8zKfsZHOg5yHlj2PyzB+5Xjiu8o8Rs5/IsSCa/M4Xr34DyNn7BoVGP69YVX1x9FE1L4TOAQ==
   dependencies:
-    markdown-it-attribution-references "^1.0.0-alpha.0"
+    markdown-it-attribution-references "^1.0.0-alpha.10"
 
 vuepress-plugin-container@^2.0.2:
   version "2.1.5"
@@ -8666,19 +8666,19 @@ vuepress-plugin-container@^2.0.2:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
 
-vuepress-plugin-figure-references@^1.0.0-alpha.0:
-  version "1.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-figure-references/-/vuepress-plugin-figure-references-1.0.0-alpha.0.tgz#2499ba48e2e8a72289f516bb90983361a9407a4b"
-  integrity sha512-YAL2qKRFEYtc2yCnvKpN3fL/B2Q/mjVhOfS+0vT7qvvXnBTmX13T5xMviV73098UrZ9l7f2BTurGBBZJSBuCRQ==
+vuepress-plugin-figure-references@^1.0.0-alpha.4:
+  version "1.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-figure-references/-/vuepress-plugin-figure-references-1.0.0-alpha.4.tgz#f13c0677c59fe3e429c46d8db7dd543599599fd9"
+  integrity sha512-+HRlZCFBwfBUy/5VatHKmXh29R39c/CkHo5efz0GkJLJ97et3RSuyYK/SJVhkr0iWN6C6U65xuqV11uQmLnu5g==
   dependencies:
-    markdown-it-figure-references "^1.0.0-alpha.0"
+    markdown-it-figure-references "^1.0.0-alpha.9"
 
-vuepress-plugin-table-references@^1.0.0-alpha.0:
-  version "1.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-table-references/-/vuepress-plugin-table-references-1.0.0-alpha.0.tgz#0a0266251deff8eca94f4d0016d489860a3d2679"
-  integrity sha512-glTZTSHumdL+PtHEFVJ76UmyLzdc/RB0fqjhi+aFVVxnDYKdY8FFWlftMnhfdEW2J+a3ydGODv0zJGJP7RVVww==
+vuepress-plugin-table-references@^1.0.0-alpha.4:
+  version "1.0.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-table-references/-/vuepress-plugin-table-references-1.0.0-alpha.4.tgz#cd8a72298ed3de57a50fbe3b8c918350775507f7"
+  integrity sha512-vBrBAkhdL0M0MFodzmnpgQg+eLZZUcnfElUC6U4wdnIDkg365Jt7vGij37UxO7wKtjVd1lw2vxRJ4P6Nel2cFg==
   dependencies:
-    markdown-it-table-references "^1.0.0-alpha.0"
+    markdown-it-table-references "^1.0.0-alpha.9"
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"

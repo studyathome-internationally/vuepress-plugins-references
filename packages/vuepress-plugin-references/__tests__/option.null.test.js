@@ -11,26 +11,16 @@ describe("options", () => {
     const temp = resolve(__dirname, ".temp");
     app = createApp({
       temp,
-      plugins: [
-        [
-          "vuepress-plugin-references",
-          {
-            figures: {
-              options: {
-                list: {
-                  title: "List of Images",
-                },
-              },
-            },
-          },
-        ],
-      ],
+      plugins: [["vuepress-plugin-references", null]],
     });
     return app.process();
   });
 
   it("option pass-through", () => {
-    const text = readFileSync(join(__dirname, "__cases__", "basic.multi.1.md"), "utf8");
+    const text = readFileSync(
+      join(__dirname, "__cases__", "basic.multi.1.md"),
+      "utf8"
+    );
     const { data, content } = parseFrontmatter(text);
     const { html } = app.markdown.render(content, {
       ...(data.ENV || {}),
@@ -83,7 +73,7 @@ describe("options", () => {
         </div>
       </div>
       <p>The example contains following references: <a href="#the-stormtroopocat" class="figure-reference">Figure 1</a>, <a href="#client-overview" class="table-reference">Table 1</a>, <a href="#wikipedia-authors-markdown" class="attribution-reference">Attribution 1</a>.</p>
-      <h2 id="list-of-figures" class="list"><a class="header-anchor" href="#list-of-figures">#</a> List of Images</h2>
+      <h2 id="list-of-figures" class="list"><a class="header-anchor" href="#list-of-figures">#</a> List of Figures</h2>
       <ol class="list">
         <li class="item"><a href="#the-stormtroopocat" class="label">Figure 1</a>: The Stormtroopocat</li>
       </ol>

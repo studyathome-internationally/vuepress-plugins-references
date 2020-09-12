@@ -15,14 +15,12 @@ const plugin = (options, ctx) => {
 };
 
 function loadOptions(options) {
-  return options
-    ? {
-        options: Object.assign({}, plugin.defaults.options, options.options ? options.options : {}),
-        figures: Object.assign({}, plugin.defaults.figures, options.figures ? options.figures : {}),
-        tables: Object.assign({}, plugin.defaults.tables, options.tables ? options.tables : {}),
-        attributions: Object.assign({}, plugin.defaults.attributions, options.attributions ? options.attributions : {}),
-      }
-    : plugin.defaults;
+  return {
+    options: Object.assign({}, plugin.defaults.options, options.options ? options.options : {}),
+    figures: Object.assign({}, plugin.defaults.figures, options.figures ? options.figures : {}),
+    tables: Object.assign({}, plugin.defaults.tables, options.tables ? options.tables : {}),
+    attributions: Object.assign({}, plugin.defaults.attributions, options.attributions ? options.attributions : {}),
+  };
 }
 
 plugin.defaults = {

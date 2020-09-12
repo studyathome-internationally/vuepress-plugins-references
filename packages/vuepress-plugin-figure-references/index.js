@@ -42,12 +42,10 @@ function image_renderer(opts, renderer) {
 }
 
 function loadOptions(options) {
-  return options
-    ? {
-        wrap: Object.assign({}, plugin.defaults.wrap, options.wrap ? options.wrap : {}),
-        options: Object.assign({}, plugin.defaults.options, options.options ? options.options : {}),
-      }
-    : plugin.defaults;
+  return {
+    wrap: Object.assign({}, plugin.defaults.wrap, typeof options.wrap === "boolean" ? options.wrap : {}),
+    options: Object.assign({}, plugin.defaults.options, options.options ? options.options : {}),
+  };
 }
 
 plugin.defaults = {

@@ -17,10 +17,7 @@ describe("basic functionality", () => {
   });
 
   it("header-anchor insertion", () => {
-    const text = readFileSync(
-      join(__dirname, "__cases__", "basic.1.md"),
-      "utf8"
-    );
+    const text = readFileSync(join(__dirname, "__cases__", "basic.1.md"), "utf8");
     const { data, content } = parseFrontmatter(text);
     const { html } = app.markdown.render(content, {
       ...(data.ENV || {}),
@@ -49,13 +46,13 @@ describe("basic functionality", () => {
             </tbody>
           </table>
           <figcaption>
-            <a href="#client-overview">Table 1</a>: Client overview
+            <a href="#client-overview" class="anchor">§</a><a href="#client-overview" class="label">Table 1</a>: Client overview
           </figcaption>
         </figure>
       </div>
-      <h2 id="list-of-tables"><a href="#list-of-tables" class="header-anchor">#</a>List of Tables</h2>
-      <ol class="list-of-tables-list">
-        <li><a href="#client-overview">Table 1</a>: Client overview</li>
+      <h2 id="list-of-tables" class="list"><a class="header-anchor" href="#list-of-tables">#</a> List of Tables</h2>
+      <ol class="list">
+        <li class="item"><a href="#client-overview" class="label">Table 1</a>: Client overview</li>
       </ol>
     `);
   });

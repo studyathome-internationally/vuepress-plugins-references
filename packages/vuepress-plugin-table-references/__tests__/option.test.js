@@ -16,7 +16,9 @@ describe("options", () => {
           "vuepress-plugin-table-references",
           {
             options: {
-              listTitle: "List of Spreadsheets",
+              list: {
+                title: "List of Spreadsheets",
+              },
             },
           },
         ],
@@ -55,13 +57,13 @@ describe("options", () => {
             </tbody>
           </table>
           <figcaption>
-            <a href="#client-overview">Table 1</a>: Client overview
+            <a href="#client-overview" class="anchor">§</a><a href="#client-overview" class="label">Table 1</a>: Client overview
           </figcaption>
         </figure>
       </div>
-      <h2 id="list-of-tables"><a href="#list-of-tables" class="header-anchor">#</a>List of Spreadsheets</h2>
-      <ol class="list-of-tables-list">
-        <li><a href="#client-overview">Table 1</a>: Client overview</li>
+      <h2 id="list-of-tables" class="list"><a class="header-anchor" href="#list-of-tables">#</a> List of Spreadsheets</h2>
+      <ol class="list">
+        <li class="item"><a href="#client-overview" class="label">Table 1</a>: Client overview</li>
       </ol>
     `);
   });

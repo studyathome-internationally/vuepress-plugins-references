@@ -20,28 +20,48 @@ Enable plugin in `.vuepress/config.js`
 
 ```js
 module.exports = {
-  plugins: ["table-references"]
-}
+  plugins: ["table-references"],
+};
 ```
 
 or
 
 ```js
 module.exports = {
-  plugins: ["vuepress-plugin-table-references"]
-}
+  plugins: ["vuepress-plugin-table-references"],
+};
 ```
 
 or
 
 ```js
 module.exports = {
-  plugins: [["table-references", opts]]
-}
+  plugins: [["table-references", opts]],
+};
 ```
 
-The `opts` object is passed through to [markdown-it-table-references](https://www.npmjs.com/package/markdown-it-table-references) (as is).
+<style>
+table { width: 100%;} td:first-child {width: 15%;} td:last-child {width: 45%;}
+</style>
 
+The `opts` object can contain:
+
+| Name      | Description                                                                                                        | Default                                                                                                                          |
+| --------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| `wrap`    | Rule name to insert new rules after.                                                                               | see below                                                                                                                        |
+| `options` | [markdown-it-table-references](https://www.npmjs.com/package/markdown-it-figure-references) configuration options. | see [here](https://github.com/studyathome-internationally/markdown-it-plugins/tree/master/packages/markdown-it-table-references) |
+
+<br/>
+
+The `wrap` object can contain:
+
+| Name     | Description    | Default     |
+| -------- | -------------- | ----------- |
+| `enable` | Wrap figure.   | `true`      |
+| `tag`    | Wrapper tag.   | `"div"`     |
+| `class`  | Wrapper class. | `"wrapper"` |
+
+<br/>
 ## License
 
 [GPL-3.0](https://github.com/studyathome-internationally/vuepress-plugins/blob/master/LICENSE) &copy; [StudyATHome Internationally](https://github.com/studyathome-internationally/)

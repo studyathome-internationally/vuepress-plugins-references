@@ -40,7 +40,7 @@ Enable plugin in `.vuepress/config.js`
 
 ```js
 module.exports = {
-  plugins: ["table-attribution"],
+  plugins: ["attribution-references"],
 };
 ```
 
@@ -48,7 +48,7 @@ or
 
 ```js
 module.exports = {
-  plugins: [["table-attribution", opts]],
+  plugins: [["attribution-references", opts]],
 };
 ```
 

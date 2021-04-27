@@ -60,7 +60,7 @@ The `opts` object can contain:
 
 | Name      | Description                                                                                                        | Default                                                                                                                          |
 | --------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| `wrap`    | Rule name to insert new rules after.                                                                               | see below                                                                                                                        |
+| `wrap`    | Wrap options.                                                                               | see below                                                                                                                        |
 | `options` | [markdown-it-table-references](https://www.npmjs.com/package/markdown-it-figure-references) configuration options. | see [here](https://github.com/studyathome-internationally/markdown-it-plugins/tree/master/packages/markdown-it-table-references) |
 
 <br/>

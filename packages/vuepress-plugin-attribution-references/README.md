@@ -61,7 +61,7 @@ The `opts` object can contain:
 | Name      | Description                                                                                                              | Default                                                                                                                                |
 | --------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `wrap`    | Wrap options.                                                                                     | see below                                                                                                                              |
-| `options` | [markdown-it-attribution-references](https://www.npmjs.com/package/markdown-it-figure-references) configuration options. | see [here](https://github.com/studyathome-internationally/markdown-it-plugins/tree/master/packages/markdown-it-attribution-references) |
+| `options` | [markdown-it-attribution-references](https://www.npmjs.com/package/markdown-it-attribution-references) configuration options. | see [here](https://github.com/studyathome-internationally/markdown-it-plugins/tree/master/packages/markdown-it-attribution-references) |
 
 <br/>
 

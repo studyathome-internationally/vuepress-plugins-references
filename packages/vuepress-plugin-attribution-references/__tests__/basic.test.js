@@ -11,7 +11,18 @@ describe("basic functionality", () => {
     const temp = resolve(__dirname, ".temp");
     app = createApp({
       temp,
-      plugins: [["vuepress-plugin-attribution-references"]],
+      plugins: [["vuepress-plugin-attribution-references", {
+        options: {
+          sources: [
+            {
+              key: "wiki:markdown",
+              author: ["Wikipedia Authors", "https://en.wikipedia.org/w/index.php?title=Markdown&action=history"],
+              title: ["Markdown", "https://en.wikipedia.org/w/index.php?title=Markdown&oldid=975764292"],
+              license: ["Creative Commons: Attribution-ShareAlike 4.0", "https://creativecommons.org/licenses/by-sa/4.0/"],
+            },
+          ],
+        }
+      }]],
     });
     return app.process();
   });
@@ -28,24 +39,24 @@ describe("basic functionality", () => {
     });
     expect(html).toMatchInlineSnapshot(`
       <h1 id="markdown"><a class="header-anchor" href="#markdown">#</a> Markdown</h1>
-      <div id="wikipedia-authors-markdown" class="wrapper">
+      <div id="wiki_markdown__1" class="wrapper">
         <div class="parent">
           <div class="child">
             <p>Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
               Markdown is often used for formatting readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.</p>
           </div>
-          <p><a href="#wikipedia-authors-markdown" class="anchor">§</a><a href="#wikipedia-authors-markdown" class="label">Attribution 1</a><span>Based on: <a href="https://en.wikipedia.org/w/index.php?title=Markdown&amp;oldid=975764292" target="_blank" rel="noopener noreferrer">Markdown<OutboundLink/></a> by <a href="https://en.wikipedia.org/w/index.php?title=Markdown&amp;action=history" target="_blank" rel="noopener noreferrer">Wikipedia Authors<OutboundLink/></a>, License: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons: Attribution-ShareAlike 4.0<OutboundLink/></a></span></p>
+          <p><a href="#wiki_markdown__1" class="anchor">§</a>[<a href="#wiki_markdown" class="label">1</a>]</p>
         </div>
       </div>
       <h2 id="list-of-attributions" class="list"><a class="header-anchor" href="#list-of-attributions">#</a> List of Attributions</h2>
       <ol class="list">
-        <li class="item"><a href="#wikipedia-authors-markdown" class="label">Attribution 1</a>: <a href="https://en.wikipedia.org/w/index.php?title=Markdown&amp;oldid=975764292" target="_blank" rel="noopener noreferrer">Markdown
+        <li id="wiki_markdown" class="item"><span class="label">[1]</span>: <a href="https://en.wikipedia.org/w/index.php?title=Markdown&amp;oldid=975764292" class="title" target="_blank" rel="noopener noreferrer">Markdown
             <OutboundLink />
-          </a> (By: <a href="https://en.wikipedia.org/w/index.php?title=Markdown&amp;action=history" target="_blank" rel="noopener noreferrer">Wikipedia Authors
+          </a> (By: <a href="https://en.wikipedia.org/w/index.php?title=Markdown&amp;action=history" class="author" target="_blank" rel="noopener noreferrer">Wikipedia Authors
             <OutboundLink />
-          </a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons: Attribution-ShareAlike 4.0
+          </a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="license" target="_blank" rel="noopener noreferrer">Creative Commons: Attribution-ShareAlike 4.0
             <OutboundLink />
-          </a></li>
+          </a>)</li>
       </ol>
     `);
   });

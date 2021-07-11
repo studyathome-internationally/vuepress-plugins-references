@@ -3402,7 +3402,7 @@ entities@^1.1.1, entities@~1.1.1:
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
   integrity sha512-f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==
 
-entities@^2.0.0:
+entities@^2.0.0, entities@~2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.0.3.tgz#5c487e5742ab93c15abb5da22759b8590ec03b7f"
   integrity sha512-MyoZ0jgnLvB2X3Lg5HqpFmn1kybDiIfEQmKzTb5apr51Rb+T3KdmMiqa70T+bhGnyv7bQ6WMj2QMHpGMmlrUYQ==
@@ -5467,6 +5467,13 @@ linkify-it@^2.0.0:
   dependencies:
     uc.micro "^1.0.1"
 
+linkify-it@^3.0.1:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-3.0.2.tgz#f55eeb8bc1d3ae754049e124ab3bb56d97797fb8"
+  integrity sha512-gDBO4aHNZS6coiZCKVhSNh43F9ioIL4JwRjLZPkoLIY4yZFwg264Y5lu2x6rb1Js42Gh6Yqm2f6L2AJcnkzinQ==
+  dependencies:
+    uc.micro "^1.0.1"
+
 loader-runner@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
@@ -5622,6 +5629,13 @@ markdown-it-anchor@^5.0.2:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.3.0.tgz#d549acd64856a8ecd1bea58365ef385effbac744"
   integrity sha512-/V1MnLL/rgJ3jkMWo84UR+K+jF1cxNG1a+KwqeXqTIJ+jtA8aWSHuigx8lTzauiIjBDbwF3NcWQMotd0Dm39jA==
 
+markdown-it-attribution-references@2.0.0-alpha.0:
+  version "2.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-attribution-references/-/markdown-it-attribution-references-2.0.0-alpha.0.tgz#00c436395f4b1bc7fb0299cb2abaa8cef06b2ce7"
+  integrity sha512-hbTXQ0/SUeUU+WhdiDxxD2x+YJsgwzVScYuV3ijRjbgq7xW1+pb1fPSlk0WG2uS/Yc4nLpwI1VN79+UWNr08WQ==
+  dependencies:
+    markdown-it "^11.0.0"
+
 markdown-it-chain@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/markdown-it-chain/-/markdown-it-chain-1.3.0.tgz#ccf6fe86c10266bafb4e547380dfd7f277cc17bc"
@@ -5639,15 +5653,40 @@ markdown-it-emoji@^1.4.0:
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-1.4.0.tgz#9bee0e9a990a963ba96df6980c4fddb05dfb4dcc"
   integrity sha1-m+4OmpkKljupbfaYDE/dsF37Tcw=
 
-markdown-it-references@2.0.0-alpha.0:
+markdown-it-figure-references@2.0.0-alpha.0:
   version "2.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-references/-/markdown-it-references-2.0.0-alpha.0.tgz#4d16446de4ec860492c955afd2b19313fdd454a9"
-  integrity sha512-kF4LxQ/hl8eP4xYM80MFD6RC/GPJpoNj5s7kyCh01QY5pvV97XlvoD83Qgrrm8NRATRIFkQf/xX8rF+xmkVvRg==
+  resolved "https://registry.yarnpkg.com/markdown-it-figure-references/-/markdown-it-figure-references-2.0.0-alpha.0.tgz#c6e051538f5857e4c63bd4bd2fb33468a3af68b8"
+  integrity sha512-2uN7CtO3j9X7dx2v7q2OtJHbErZZjyExNfClWwfbQJDtRCcMJAhZzrEVOr0lTJ9XAqWw2XEemOUdohffKyFMAQ==
+  dependencies:
+    markdown-it "^11.0.0"
+
+markdown-it-references@2.1.0-alpha.0:
+  version "2.1.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-references/-/markdown-it-references-2.1.0-alpha.0.tgz#5f244f64c5e06f5d5ee793503e87259e3cffe993"
+  integrity sha512-ViIrLUWH11bjxUphY1o3IfuVQGWLgcthykKJfjlkoX1TCz8ddFCIBr+iYPS4WjCz2o2QzViU9Qa2htn7hMplpQ==
 
 markdown-it-table-of-contents@^0.4.0:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/markdown-it-table-of-contents/-/markdown-it-table-of-contents-0.4.4.tgz#3dc7ce8b8fc17e5981c77cc398d1782319f37fbc"
   integrity sha512-TAIHTHPwa9+ltKvKPWulm/beozQU41Ab+FIefRaQV1NRnpzwcV9QOe6wXQS5WLivm5Q/nlo0rl6laGkMDZE7Gw==
+
+markdown-it-table-references@2.0.0-alpha.0:
+  version "2.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-table-references/-/markdown-it-table-references-2.0.0-alpha.0.tgz#d0ddbb9f91bfd067781b212737c727fb264e639d"
+  integrity sha512-RYE/klm2W6/1/XBT4sezOegj212yjTjfKmqcJ9a34dUKtKgl7VuN78U1juizc5hI19X2btJYVoeP6uwuiGa0lg==
+  dependencies:
+    markdown-it "^11.0.0"
+
+markdown-it@^11.0.0:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-11.0.1.tgz#b54f15ec2a2193efa66dda1eb4173baea08993d6"
+  integrity sha512-aU1TzmBKcWNNYvH9pjq6u92BML+Hz3h5S/QpfTFwiQF852pLT+9qHsrhM9JYipkOXZxGn+sGH8oyJE9FD9WezQ==
+  dependencies:
+    argparse "^1.0.7"
+    entities "~2.0.0"
+    linkify-it "^3.0.1"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.5"
 
 markdown-it@^8.4.1:
   version "8.4.2"
@@ -8644,6 +8683,13 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
+vuepress-plugin-attribution-references@^2.0.0-alpha.0:
+  version "2.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-attribution-references/-/vuepress-plugin-attribution-references-2.0.0-alpha.0.tgz#5c432b7b5a810abd2d650252f6a183c26551c312"
+  integrity sha512-84enTf5r78YvvXA7gfxoNKn8DTmeJQZIE1jfn1v8ITd/AOh6BfStta3nUugiYnjBA49ubahpgZA+hINH6yMuQw==
+  dependencies:
+    markdown-it-attribution-references "2.0.0-alpha.0"
+
 vuepress-plugin-container@^2.0.2:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-container/-/vuepress-plugin-container-2.1.5.tgz#37fff05662fedbd63ffd3a5463b2592c7a7f3133"
@@ -8651,6 +8697,20 @@ vuepress-plugin-container@^2.0.2:
   dependencies:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
+
+vuepress-plugin-figure-references@^2.0.0-alpha.0:
+  version "2.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-figure-references/-/vuepress-plugin-figure-references-2.0.0-alpha.0.tgz#c7eea6023e1fbf0fc233a152362d82be9480c7d7"
+  integrity sha512-U+K1MzD49hPfFs72QZcrV+06zEZtzqJCfhI6EJgFQKqdtHP78ihkluWazwD68lItyISnlmpgv9CaiL8Tc+aWUw==
+  dependencies:
+    markdown-it-figure-references "2.0.0-alpha.0"
+
+vuepress-plugin-table-references@^2.0.0-alpha.0:
+  version "2.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-table-references/-/vuepress-plugin-table-references-2.0.0-alpha.0.tgz#b42a6e4766df8cb8c87bd0190f7dd198bce061dc"
+  integrity sha512-9VLLjHyTHdadKSf4hqis+3L0/qvX0JxC3XNkOWywiDhy/Ha/pfecwFj2gPBlAunrGWbKUBewg5ZcMRue3HTIbQ==
+  dependencies:
+    markdown-it-table-references "2.0.0-alpha.0"
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"

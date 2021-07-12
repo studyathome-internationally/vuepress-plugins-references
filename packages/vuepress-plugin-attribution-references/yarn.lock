@@ -5629,10 +5629,10 @@ markdown-it-anchor@^5.0.2:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.3.0.tgz#d549acd64856a8ecd1bea58365ef385effbac744"
   integrity sha512-/V1MnLL/rgJ3jkMWo84UR+K+jF1cxNG1a+KwqeXqTIJ+jtA8aWSHuigx8lTzauiIjBDbwF3NcWQMotd0Dm39jA==
 
-markdown-it-attribution-references@2.1.0-alpha.0:
-  version "2.1.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/markdown-it-attribution-references/-/markdown-it-attribution-references-2.1.0-alpha.0.tgz#09fc6c2984a6880bf36044bc770da5401fd74a1c"
-  integrity sha512-JKiu6qU2s4xBQxHhT/NogVExxaE99yN0LX1H6qMDgAmUlZq8J1XvD5vzOhPKiKZ+1HAG8MfhAOjo0jIDoJ1Qmg==
+markdown-it-attribution-references@2.1.0-alpha.1:
+  version "2.1.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-attribution-references/-/markdown-it-attribution-references-2.1.0-alpha.1.tgz#6dc927934f390757349dda78e0fa5478f3a7c274"
+  integrity sha512-MeZvOqWM7vxk48h1QfKYKTFrlW8PQpstpjik0C0iCP4nUZ+pb1uvp+fFQ+IR1wWq3n23InOWtZuUauoyWZcXgw==
   dependencies:
     markdown-it "^11.0.0"
 

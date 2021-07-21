@@ -41,7 +41,7 @@
     "prettier": "^2.1.1"
   },
   "dependencies": {
-    "markdown-it-references": "2.1.0-alpha.1",
+    "markdown-it-references": "2.1.0-alpha.2",
     "vuepress-plugin-attribution-references": "^2.1.0-alpha.1",
     "vuepress-plugin-figure-references": "^2.1.0-alpha.1",
     "vuepress-plugin-table-references": "^2.1.0-alpha.1"

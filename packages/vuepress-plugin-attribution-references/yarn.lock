@@ -5629,13 +5629,13 @@ markdown-it-anchor@^5.0.2:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-5.3.0.tgz#d549acd64856a8ecd1bea58365ef385effbac744"
   integrity sha512-/V1MnLL/rgJ3jkMWo84UR+K+jF1cxNG1a+KwqeXqTIJ+jtA8aWSHuigx8lTzauiIjBDbwF3NcWQMotd0Dm39jA==
 
-markdown-it-attribution-references@2.1.0-alpha.2:
-  version "2.1.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/markdown-it-attribution-references/-/markdown-it-attribution-references-2.1.0-alpha.2.tgz#e93f5cb3b79851a914d76acda4f2de9b11ec8397"
-  integrity sha512-prZ0Ttg4F6Tp25ZjOZc7H3CumdzleKhDhJQPSZsxOf+OS90QYO4Wj3TSJLyujB2C0tal76NysLXCaCAgung3HQ==
+markdown-it-attribution-references@2.1.0-alpha.3:
+  version "2.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/markdown-it-attribution-references/-/markdown-it-attribution-references-2.1.0-alpha.3.tgz#b2d7d52c914425e40af3c59b2226e04123d40c31"
+  integrity sha512-7Dabx3Sp6Ddk1+mDqZ8EzXN/KAW2WGUuwNnpNcMQtAS8Ltj36sdVVJSH/1OidxkuS9r8FMrrQ5UQ3AdC9pC9GA==
   dependencies:
     markdown-it "^11.0.0"
-    markdown-it-figure-references "^2.1.0-alpha.2"
+    markdown-it-figure-references "^2.1.0-alpha.3"
 
 markdown-it-chain@^1.3.0:
   version "1.3.0"
@@ -5654,10 +5654,10 @@ markdown-it-emoji@^1.4.0:
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-1.4.0.tgz#9bee0e9a990a963ba96df6980c4fddb05dfb4dcc"
   integrity sha1-m+4OmpkKljupbfaYDE/dsF37Tcw=
 
-markdown-it-figure-references@^2.1.0-alpha.2:
-  version "2.1.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/markdown-it-figure-references/-/markdown-it-figure-references-2.1.0-alpha.2.tgz#1108d2171e6b1177a15f4e6c2532651c67106a05"
-  integrity sha512-Y7lWhP3manvod6qzSDl4kFaycQZI9772c5pcTD/EGEsAtFdQgjKjMiK8ul7x+uSarh4UFMa5iTNb8oYY+v/2bA==
+markdown-it-figure-references@^2.1.0-alpha.3:
+  version "2.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/markdown-it-figure-references/-/markdown-it-figure-references-2.1.0-alpha.3.tgz#3af28b1fd1b578d8a1f7326d374150e5f31ba537"
+  integrity sha512-SpH7WW5QsZ8KFGjWS4jajVOh5EvCNtQTBr6MAwT8cMiR50ghW3WnclxzbkGCLIJKZySPR0VHypvQ3dmZAWzVLw==
   dependencies:
     markdown-it "^11.0.0"
 

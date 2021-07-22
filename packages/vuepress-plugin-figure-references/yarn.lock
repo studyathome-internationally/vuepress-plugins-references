@@ -5854,10 +5854,10 @@ markdown-it-emoji@^1.4.0:
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-1.4.0.tgz#9bee0e9a990a963ba96df6980c4fddb05dfb4dcc"
   integrity sha1-m+4OmpkKljupbfaYDE/dsF37Tcw=
 
-markdown-it-figure-references@2.1.0-alpha.2:
-  version "2.1.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/markdown-it-figure-references/-/markdown-it-figure-references-2.1.0-alpha.2.tgz#1108d2171e6b1177a15f4e6c2532651c67106a05"
-  integrity sha512-Y7lWhP3manvod6qzSDl4kFaycQZI9772c5pcTD/EGEsAtFdQgjKjMiK8ul7x+uSarh4UFMa5iTNb8oYY+v/2bA==
+markdown-it-figure-references@2.1.0-alpha.3:
+  version "2.1.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/markdown-it-figure-references/-/markdown-it-figure-references-2.1.0-alpha.3.tgz#3af28b1fd1b578d8a1f7326d374150e5f31ba537"
+  integrity sha512-SpH7WW5QsZ8KFGjWS4jajVOh5EvCNtQTBr6MAwT8cMiR50ghW3WnclxzbkGCLIJKZySPR0VHypvQ3dmZAWzVLw==
   dependencies:
     markdown-it "^11.0.0"
 
